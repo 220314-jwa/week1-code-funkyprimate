@@ -1,7 +1,11 @@
+<!-- is needed in HTML5  -->
 <html>
+<!-- header title adds the title to the browser tab of the webpage and needed for search engine webcrawlers  -->
 	<head>
 		<title>Daily Code Review</title>
 	</head>
+<!-- body tag is needed to show content on webpage. It contains a Header 1 allowing bold title font. Form allows for elements (label, input, button) and we attach the action 
+action="http://localhost:8080/cook"  so Javalin can get request from java backend.   -->
 	<body>
 		<h1>Cook your food!</h1>
 		<form action="http://localhost:8080/cook">
@@ -12,7 +16,7 @@
 		</form>
 	</body>
 </html>
-
+<!--  Javalin setup for allowing the get and post request /cook from the HTML file to the Java backend through the localhost8080   -->
 public static void main(String[] args) {
 	Javalin app = Javalin.create();
 	app.start();

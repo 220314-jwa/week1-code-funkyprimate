@@ -1,7 +1,12 @@
+//integer variable is score = 80
 int score = 80;
 
+//Result is a string field that can be instantiated or used within the class scope 
 String result;
 
+//If statement is declaring score to absolutely equal to 80 as a true statement that will print out "You passed". Else if statement above 80 will print out "You did great"
+//and else or false statement will print out "You did not pass. Try again"
+"
 if (score == 80) {
 	result = "You passed!";
 } else if (score > 80) {
@@ -9,5 +14,5 @@ if (score == 80) {
 } else {
 	result = "You did not pass. Try again!";
 }
-
+// print to console the result 
 System.out.println(result);

@@ -1,12 +1,14 @@
 public class Main {
 	public static void main(String[] args) {
 		Javalin app = Javalin.create();
-
+// Javalin is instantiated with .create() method and not new Javalin() as it is in vanilla Java. Also, applying the start() method is initiating the framework. 
 		app.start();
-
+// Javalin is fetching the string "foods" and new object method Food() is being created and overloaded with strings "carrot" and "vegetable". 
 		app.get("foods", ctx -> {
 			Food myFood = new Food("carrots", "vegetable");
 			ctx.result("You got: " + myFood.name);
 		});
 	}
 }
+
+// the context result will be "You got: carrots" and "You got: vegetable"

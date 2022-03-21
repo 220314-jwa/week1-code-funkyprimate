@@ -1,19 +1,21 @@
+// main class Food contains String fields name and type 
 public class Food {
 	public String name;
 	public String type;
-
+// public class method Food() is being overloaded with the fields name and type. Also, this. keyword with the attributes name & type class veriables
 	public Food(String name, String type) {
 		this.name = name;
 		this.type = type;
 	}
-
+// the public method cook() contains the if statement not equal to name.contains("cooked") the result will  be added the variable 'name' to the string "cooked"
 	public void cook() {
 		if (!name.contains("cooked")) {
 			name = "cooked " + name;
 		}
 	}
 }
-
+// Food() method is being overridden and overloaded to include the strings "food", "vegetables" in the parameters. The console will print out the result "cooked potatoe" and 
+// "cooked vegetable" 
 public class Main {
 	public static void main(String[] args) {
 		Food myFood = new Food("potato", "vegetable");

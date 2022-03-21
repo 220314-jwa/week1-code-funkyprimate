@@ -1,22 +1,24 @@
+// this is the main() method string needed after creating the Class
 public static void main(String[] args) {
+// Array var called foodTypes that equals the method getFoodTypes(). New variable called myType equals the 3rd integer in the array foodTypes
 	String[] foodTypes = getFoodTypes();
 	String myType = foodTypes[2];
-
+// String array var that equals the method getFoodsByType(myType) that is choosing the 3rd element in the array 
 	String[] foodsOfMyType = getFoodsByType(myType);
-	
+// 	
 	for (String food : foodsOfMyType) {
 		System.out.println(food);
 	}
 }
-
+// String of Array arguements for foodTypes
 public static String[] getFoodTypes() {
 	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"};
 	return foodTypes;
 }
-
+// Variable foods equals the new String[] selecting the fourth arguement in the array 
 public static String[] getFoodsByType(String type) {
 	String[] foods = new String[3];
-
+// Switch statements for Breakfast, Lunch, Dinner, Dessert and the items that will be called in the Array variable foods. 
 	switch(type) {
 	case "breakfast":
 		foods[0] = "pancakes";
@@ -47,6 +49,6 @@ public static String[] getFoodsByType(String type) {
 		// add your own
 		break;
 	}
-
+// return result of the array foods. 
 	return foods;
 }
